@@ -263,7 +263,7 @@ require('lazy').setup({
 
     opts = {
       workspaces = {
-        { name = 'vault', path = '/Users/hannes.methner/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Main' },
+        { name = 'vault', path = '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Main' },
       },
       daily_notes = {
         folder = 'journal/daily', -- Year/MonthNumber-MonthName
