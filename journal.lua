@@ -512,6 +512,10 @@ require('lazy').setup({
       end, { desc = 'Toggle checkbox' })
       vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = 'Obsidian: Today’s note' })
       vim.keymap.set('n', '<leader>oy', '<cmd>ObsidianToday-1<CR>', { desc = 'Obsidian: Yesterday’s note' })
+      vim.keymap.set('n', '<leader>on', function()
+        local title = vim.fn.input 'Note title: '
+        vim.cmd('ObsidianNew ' .. title)
+      end, { desc = 'Create new Obsidian note with title' })
     end,
   },
 
@@ -1027,8 +1031,8 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
@@ -1037,7 +1041,7 @@ require('lazy').setup({
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
