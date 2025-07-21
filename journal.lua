@@ -266,8 +266,8 @@ require('lazy').setup({
         { name = 'vault', path = '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Main' },
       },
       daily_notes = {
-        folder = 'journal/daily', -- Year/MonthNumber-MonthName
-        date_format = '%Y-%m-%d', -- File name: 2025-08-11.md
+        folder = 'journal/daily',
+        date_format = '%Y-%m-%d-%A', -- File name: 2025-08-11-Sunday.md
       },
     },
   },
@@ -458,6 +458,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader>:', require('telescope.builtin').commands, { desc = 'Telescope commands' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
