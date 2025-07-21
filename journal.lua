@@ -170,6 +170,10 @@ vim.o.confirm = true
 -- See https://github.com/epwalsh/obsidian.nvim/issues/286
 vim.opt_local.conceallevel = 2
 
+-- Enable spell checking and set language to en_us
+vim.opt.spell = true
+vim.opt.spelllang = { 'en_us' }
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
