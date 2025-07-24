@@ -265,7 +265,7 @@ require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
   {
-    'epwalsh/obsidian.nvim',
+    'obsidian-nvim/obsidian.nvim',
     version = '*',
     lazy = true,
     ft = 'markdown',
@@ -276,6 +276,10 @@ require('lazy').setup({
     opts = {
       workspaces = {
         { name = 'vault', path = '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Main' },
+      },
+      completion = {
+        blink = true,
+        min_chars = 2,
       },
       daily_notes = {
         folder = 'journal/daily',
@@ -1040,7 +1044,7 @@ require('lazy').setup({
   --
   -- require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
-  require 'kickstart.plugins.lint',
+  -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
