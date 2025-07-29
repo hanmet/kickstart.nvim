@@ -216,8 +216,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Search for all todos with telescope live grep
 vim.keymap.set('n', '<leader>td', function()
   require('telescope.builtin').live_grep {
-    default_text = '[ ]',
+    default_text = '- [ ]',
     search_dirs = { '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Main' },
+    additional_args = function()
+      return { '--fixed-strings' } -- or { '-F' }
+    end,
   }
 end, { desc = 'Find unchecked #todo items' })
 
