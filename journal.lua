@@ -172,7 +172,7 @@ vim.opt_local.conceallevel = 2
 
 -- Enable spell checking and set language to en_us
 vim.opt.spell = true
-vim.opt.spelllang = { 'en_us' }
+vim.opt.spelllang = { 'en_us', 'de_de' }
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
