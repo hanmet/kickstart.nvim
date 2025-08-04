@@ -550,6 +550,7 @@ require('lazy').setup({
       end, { desc = 'Toggle checkbox' })
       vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianToday<CR>', { desc = 'Obsidian: Today’s note' })
       vim.keymap.set('n', '<leader>oy', '<cmd>ObsidianToday-1<CR>', { desc = 'Obsidian: Yesterday’s note' })
+      vim.keymap.set('n', '<leader>ob', '<cmd>ObsidianBacklinks<CR>', { desc = 'Obsidian: Show Backlinks' })
       vim.keymap.set('n', '<leader>on', function()
         local title = vim.fn.input 'Note title: '
         vim.cmd('ObsidianNew ' .. title)
