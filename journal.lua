@@ -172,7 +172,10 @@ vim.opt_local.conceallevel = 2
 
 -- Enable spell checking and set language to en_us
 vim.opt.spell = true
-vim.opt.spelllang = { 'en_us', 'de_de' }
+vim.opt.spelllang = { 'en_us', 'de_de', 'en_gb' }
+
+-- Wrap lines after 80 characters
+vim.opt.textwidth = 80
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -215,7 +218,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
 
 -- Search for all todos with telescope live grep
-vim.keymap.set('n', '<leader>td', function()
+vim.keymap.set('n', '<leader>st', function()
   require('telescope.builtin').live_grep {
     default_text = '- [ ]',
     search_dirs = { '~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Obsidian Main' },
@@ -223,7 +226,7 @@ vim.keymap.set('n', '<leader>td', function()
       return { '--fixed-strings' } -- or { '-F' }
     end,
   }
-end, { desc = 'Find unchecked #todo items' })
+end, { desc = '[S]earch unchecked [T]odo items' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
